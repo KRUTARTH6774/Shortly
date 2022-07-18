@@ -24,6 +24,12 @@ const Body = () => {
         setLink('')
         // setLinks(data.result.short_link)
     }
+    const CopytoClipboard = (key,value)=>{
+        // console.log(value)
+        navigator.clipboard.writeText(value)
+        document.getElementById(key).innerHTML = 'Copied!'
+        document.getElementById(key).style.background = 'black'
+    }
     // dist[link] = slink
 
     // console.log(slink);
@@ -52,7 +58,7 @@ const Body = () => {
                                 {Object.entries(slink).map(([key, value]) => <li key={key}>
                                     <h3>{key}</h3>
                                     <h3>{value}</h3>
-                                    <button>copy</button>
+                                    <button id={key} onClick={()=>{CopytoClipboard(key,value)}}>copy</button>
                                 </li>)}
                             </ul>
                         </div>

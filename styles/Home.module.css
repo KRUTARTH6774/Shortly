@@ -118,10 +118,12 @@ main .info h3{
 }
 main .log ul li h3{
   margin-left: 15vw;
+  color: 	 #2acfcf;
 }
 .log li :first-child{
   margin-left: 1vw;
   word-break: break-word;
+  color: black;
   /* color: red; */
 }
 
