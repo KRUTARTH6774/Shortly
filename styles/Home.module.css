@@ -175,8 +175,17 @@ footer .collection {
   width: 30vw;
   justify-content: space-around;
 }
-
-
+.input ::placeholder{
+  color: #f46262;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.input input{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
