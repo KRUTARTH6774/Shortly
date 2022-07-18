@@ -9,14 +9,16 @@ import instagramLogo from '../public/icon-instagram.svg'
 const Footer = () => {
     return (
         <footer>
-            <div className="getStarted">
-                <Image
+            <div className={styles.getStarted}>
+                <h1>Boost your links today</h1>
+                <button>Get Started</button>
+                {/* <Image
                     src={Meteror}
                     layout="responsive"
                     // width={700}
                     height={75}
                 // sizes='100vw'
-                />
+                /> */}
             </div>
             <div className={styles.Fcontainer}>
                 <div style={{ width: "9vw", marginLeft: "7vw" }}>

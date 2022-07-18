@@ -17,7 +17,7 @@ const Body = () => {
             alert('input field can not be empty')
         }
         else if(!data.ok){
-            alert('write somthing like : example.com')
+            alert('Wrong input :(')
         }else{
             setLinks(dist => ({ ...dist, [link]: data.result.short_link }))
         }

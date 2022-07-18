@@ -127,6 +127,25 @@ main .log ul li h3{
   /* color: red; */
 }
 
+footer .getStarted {
+  background-image: url('../public/Meteor.png');
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0%;
+  align-items: center;
+  color: white;
+}
+
+footer .getStarted button{
+  width: 7%;
+  padding: 10px;
+  border-radius: 30px;
+}
 footer .Fcontainer {
   display: flex;
   color: white;
