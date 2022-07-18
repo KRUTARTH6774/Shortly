@@ -1,5 +1,3 @@
-import { comments } from '../../../data/comments'
-
 export default function handler(req, res) {
-  res.status(200).json('abhay')
+  res.status(200).json({ name: 'John Doe' })
 }

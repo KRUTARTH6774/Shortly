@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import peopleworking from '../public/people-working.png'
 import Image from 'next/image'
@@ -46,22 +46,6 @@ const Body = () => {
                                     <h3>{value}</h3>
                                     <button>copy</button>
                                 </li>)}
-                                {/* {Object.entries(obj).map(([key, value]) => `My key is ${key} and my value is ${value}`)} */}
-                                {/* <li>
-                                    <h3>xyz3424343242342@gmail.com</h3>
-                                    <h3>xyz@gmail.com</h3>
-                                    <button>copy</button>
-                                </li>
-                                <li>
-                                    <h3>xyz3424343242342@gmail.com</h3>
-                                    <h3>xyz@gmail.com</h3>
-                                    <button>copy</button>
-                                </li>
-                                <li>
-                                    <h3>xyz3424343242342@gmail.com</h3>
-                                    <h3>xyz@gmail.com</h3>
-                                    <button>copy</button>
-                                </li> */}
                             </ul>
                         </div>
                         <div className={styles.info}>
