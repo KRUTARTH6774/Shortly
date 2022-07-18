@@ -39,13 +39,16 @@ main .input {
   /* Do not repeat the image */
   background-size: cover;
 }
-main .log ul li button{
+
+main .log ul li button {
   width: 10%;
   margin: 1%;
-} 
-main .log ul li h3{
+}
+
+main .log ul li h3 {
   margin-left: 1vw;
-} 
+}
+
 main .log ul {
   display: grid;
   gap: 10px;
@@ -55,8 +58,14 @@ main .log ul li {
   width: 64rem;
   display: flex;
   justify-content: space-between;
-  background-color: #d2cfd9;
+  /* background-color: #d2cfd9;
+ */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   align-items: center;
+}
+
+main .log ul li:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .main button {
@@ -86,19 +95,21 @@ main .log ul li {
   justify-content: center;
 }
 
-main .info{
+main .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: 110%;
 }
-main .info h1{
+
+main .info h1 {
   margin-bottom: -1%;
   font-size: 2.5rem;
   color: #35323e;
 }
-main .info h3{
+
+main .info h3 {
   color: #9e9aa7;
 }
 
@@ -116,11 +127,13 @@ main .info h3{
   flex-direction: column;
   align-items: center;
 }
-main .log ul li h3{
+
+main .log ul li h3 {
   margin-left: 15vw;
-  color: 	 #2acfcf;
+  color: #2acfcf;
 }
-.log li :first-child{
+
+.log li :first-child {
   margin-left: 1vw;
   word-break: break-word;
   color: black;
@@ -141,11 +154,12 @@ footer .getStarted {
   color: white;
 }
 
-footer .getStarted button{
+footer .getStarted button {
   width: 7%;
   padding: 10px;
   border-radius: 30px;
 }
+
 footer .Fcontainer {
   display: flex;
   color: white;
@@ -175,17 +189,20 @@ footer .collection {
   width: 30vw;
   justify-content: space-around;
 }
-.input ::placeholder{
+
+.input ::placeholder {
   color: #f46262;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   opacity: 0.6;
 }
-.input input{
+
+.input input {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
