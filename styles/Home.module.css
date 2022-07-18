@@ -56,6 +56,7 @@ main .log ul li {
   display: flex;
   justify-content: space-between;
   background-color: #d2cfd9;
+  align-items: center;
 }
 
 .main button {
@@ -120,6 +121,7 @@ main .log ul li h3{
 }
 .log li :first-child{
   margin-left: 1vw;
+  word-break: break-word;
   /* color: red; */
 }
 

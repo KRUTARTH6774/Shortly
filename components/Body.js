@@ -13,8 +13,16 @@ const Body = () => {
     const fetchLink = async (link) => {
         const response = await fetch('https://api.shrtco.de/v2/shorten?url=' + link)
         const data = await response.json()
+        if(link === ''){
+            alert('input field can not be empty')
+        }
+        else if(!data.ok){
+            alert('write somthing like : example.com')
+        }else{
+            setLinks(dist => ({ ...dist, [link]: data.result.short_link }))
+        }
+        setLink('')
         // setLinks(data.result.short_link)
-        setLinks(dist => ({ ...dist, [link]: data.result.short_link }))
     }
     // dist[link] = slink
 
