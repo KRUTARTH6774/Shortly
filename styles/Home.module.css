@@ -153,6 +153,7 @@ footer .collection {
   justify-content: space-around;
 }
 
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
