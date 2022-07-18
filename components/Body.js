@@ -1,11 +1,24 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 import peopleworking from '../public/people-working.png'
 import Image from 'next/image'
-
 import Card from './Card'
 
+
 const Body = () => {
+    const dist = {}
+    const [slink, setLinks] = useState('')
+    const [link, setLink] = useState('')
+    const fetchLink = async (link) => {
+        const response = await fetch('https://api.shrtco.de/v2/shorten?url=' + link)
+        const data = await response.json()
+        // setLinks(data.result.short_link)
+        setLinks(dist => ({ ...dist, [link]: data.result.short_link }))
+    }
+    // dist[link] = slink
+
+    // console.log(slink);
     return (
         <>
             <main>
@@ -22,13 +35,19 @@ const Body = () => {
                         />
                     </div>
                     <div className={styles.input}>
-                        <input type="text" placeholder='Sharten a link here...' />
-                        <button type='submit'>Sharten it!</button>
+                        <input type="text" value={link} onChange={(e) => { setLink(e.target.value) }} placeholder='Sharten a link here...' />
+                        <button onClick={() => fetchLink(link)} type='submit'>Sharten it!</button>
                     </div>
                     <div >
                         <div className={styles.log}>
                             <ul>
-                                <li>
+                                {Object.entries(slink).map(([key, value]) => <li key={key}>
+                                    <h3>{key}</h3>
+                                    <h3>{value}</h3>
+                                    <button>copy</button>
+                                </li>)}
+                                {/* {Object.entries(obj).map(([key, value]) => `My key is ${key} and my value is ${value}`)} */}
+                                {/* <li>
                                     <h3>xyz3424343242342@gmail.com</h3>
                                     <h3>xyz@gmail.com</h3>
                                     <button>copy</button>
@@ -42,7 +61,7 @@ const Body = () => {
                                     <h3>xyz3424343242342@gmail.com</h3>
                                     <h3>xyz@gmail.com</h3>
                                     <button>copy</button>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className={styles.info}>
