@@ -58,10 +58,10 @@ const Body = () => {
                             height={450}
                         />
                     </div>
-                    <div id='bg-img' className={styles.input}>
+                    <form onSubmit={e=>{e.preventDefault()}} id='bg-img' className={styles.input}>
                         <input type="text" value={link} onChange={(e) => { setLink(e.target.value) }} placeholder='Sharten a link here...' />
                         <button onClick={() => fetchLink(link)} type='submit'>Sharten it!</button>
-                    </div>
+                    </form>
                     <p id='error-msg' style={{ display: 'none', justifyContent: "center", color: "red", fontWeight: "bold" }}></p>
                     <div >
                         <div className={styles.log}>
